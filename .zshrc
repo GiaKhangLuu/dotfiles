@@ -1,10 +1,9 @@
-#export PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[pink]%}%D{%T}%{$reset_color%} [$(whoami)] %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}'
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
-
-#plugins=(zsh-autosuggestions)
-#source  ~/powerlevel9k/powerlevel9k.zsh-theme
-
+source $ZSH/oh-my-zsh.sh
+plugins=(zsh-autosuggestions)
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 #__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
