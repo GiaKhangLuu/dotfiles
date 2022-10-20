@@ -27,13 +27,14 @@ function install_linux {
 
   if [ "$(is_installed zsh)" == "0" ]; then
     echo "Installing zsh"
-    sudo apt-get -y install zsh zsh-completions
+    #sudo apt-get -y install zsh zsh-completions
+    sudo apt install zsh
   fi
 
   if [[ ! -d ~/.oh-my-zsh ]]; then
     echo "Installing oh-my-zsh"
     unset ZSH
-    sh -c "$(wget -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   fi
 
   if [ "$(is_installed git)" == "0" ]; then
@@ -60,7 +61,7 @@ function install_linux {
       pip3 install neovim --upgrade
     fi
 
-    wget -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   fi
 }
 
