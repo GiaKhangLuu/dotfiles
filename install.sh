@@ -139,6 +139,8 @@ function install_macos {
     fi
 
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
   fi
 }
 
@@ -153,7 +155,7 @@ function backup {
   mv ~/.tmux.conf ~/$backup_dir/.tmux.conf
   mv ~/.vim ~/$backup_dir/.vim
   mv ~/.vimrc ~/$backup_dir/.vimrc
-  mv ~/.vimrc.bundles ~/$backup_dir/.vimrc.bundles
+  #mv ~/.vimrc.bundles ~/$backup_dir/.vimrc.bundles
 }
 
 function link_dotfiles {
