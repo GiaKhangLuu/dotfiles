@@ -10,7 +10,7 @@ Clone onto your machine:
 git clone https://github.com/GiaKhangLuu/dotfiles.git
 ```
 
-Simply run file (maybe you  must run chmod +x ./install.sh before run that file):
+Simply run file (maybe you  must run `chmod +x ./install.sh` before run that file):
 
 On MacOS:
 
