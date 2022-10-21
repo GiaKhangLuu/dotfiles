@@ -4,6 +4,10 @@ A set of `vim`, `zsh`, and `tmux` configuration
 
 # Install
 
+## Prerequisite
+
+`nodejs`, `npm`, `curl`
+
 Clone onto your machine: 
 
 ```
