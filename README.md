@@ -8,6 +8,16 @@ A set of `vim`, `zsh`, and `tmux` configuration
 
 `nodejs`, `npm`, `curl`
 
+```
+sudo apt update
+sudo apt install curl
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+npm install -g npm
+```
+
 Clone onto your machine: 
 
 ```
