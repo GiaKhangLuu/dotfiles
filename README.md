@@ -8,6 +8,7 @@ A set of `vim`, `zsh`, and `tmux` configuration
 
 `nodejs`, `npm`, `curl`
 
+On Linux
 ```
 sudo apt update
 sudo apt install curl
