@@ -31,15 +31,15 @@ function install_linux {
     sudo apt install zsh
   fi
 
+  if [ "$(is_installed git)" == "0" ]; then
+    echo "Installing Git"
+    sudo apt install git
+  fi
+
   if [[ ! -d ~/.oh-my-zsh ]]; then
     echo "Installing oh-my-zsh"
     unset ZSH
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  fi
-
-  if [ "$(is_installed git)" == "0" ]; then
-    echo "Installing Git"
-    sudo apt install git
   fi
 
   if [ ! -d "$ZSH/custom/plugins/zsh-autosuggestions" ]; then
@@ -61,7 +61,9 @@ function install_linux {
       pip3 install neovim --upgrade
     fi
 
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
   fi
 }
 
