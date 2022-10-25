@@ -17,8 +17,7 @@ call plug#begin(vim_config_dir.'plugged')
     Plug 'PhilRunninger/nerdtree-buffer-ops'
 
 " Status bar
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
 
 " Multi select
     Plug 'terryma/vim-multiple-cursors'
@@ -32,7 +31,7 @@ call plug#begin(vim_config_dir.'plugged')
     Plug 'jiangmiao/auto-pairs' 						
 
 " Floaterm
-    Plug 'voldikss/vim-floaterm'
+"    Plug 'voldikss/vim-floaterm'
 
 " Source code version control 
   	Plug 'tpope/vim-fugitive'    
@@ -154,5 +153,24 @@ vnoremap P "*P
 " Config airline_
 """"""""""""""""""""""""""""""""
 
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+""""""""""""""""""""""""""""""""
+" Config lightline
+""""""""""""""""""""""""""""""""
+
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
+      \   'right': [[ 'lineinfo' ], 
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'filetype' ]]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
