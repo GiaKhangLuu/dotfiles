@@ -156,3 +156,11 @@ vnoremap P "*P
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+
+set guifont = "~/.local/share/fonts/"
+
+let g:coc_disable_startup_warning = 1
+
+
+
+
