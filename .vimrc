@@ -149,6 +149,9 @@ vnoremap Y "*Y
 vnoremap p "*p
 vnoremap P "*P
 
+" Remove highlight
+map <C-h> :nohl<CR>
+
 """"""""""""""""""""""""""""""""
 " Config airline_
 """"""""""""""""""""""""""""""""
