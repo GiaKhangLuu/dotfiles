@@ -1,4 +1,4 @@
-vim.cmd('colorscheme terafox')
+vim.cmd('colorscheme nightfox')
 
 require('lualine').setup()
 
