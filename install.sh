@@ -100,7 +100,7 @@ function install_macos {
 
   if [ ! -d "$ZSH/custom/plugins/zsh-autosuggestions" ]; then
     echo "Installing zsh-autosuggestions"
-    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
   fi
 
   if [ "$(is_installed ag)" == "0" ]; then
@@ -140,9 +140,7 @@ function install_macos {
       pip3 install neovim --upgrade
     fi
 
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-
+    #curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   fi
 }
 
@@ -165,27 +163,28 @@ function link_dotfiles {
 
   ln -s $(pwd)/.zshrc ~/.zshrc
   ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-  ln -s $(pwd)/.vim ~/.vim
-  ln -s $(pwd)/.vimrc ~/.vimrc
+
+  mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+  ln -s $(pwd)/nvim $XDG_CONFIG_HOME/nvim
+  #ln -s $(pwd)/.vim ~/.vim
+  #ln -s $(pwd)/.vimrc ~/.vimrc
   #ln -s $(pwd)/vimrc.bundles ~/.vimrc.bundles
 
   #rm -rf $HOME/.config/nvim/init.vim
   #rm -rf $HOME/.config/nvim
   #rm -rf $HOME/.vim/bundle/*
 
-  #mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-
   #ln -s $(pwd)/vim $XDG_CONFIG_HOME/nvim
   #ln -s $(pwd)/vimrc $XDG_CONFIG_HOME/nvim/init.vim
   #ln -s $(pwd)/schemes/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
-  mkdir -p ~/.config/nvim
-  touch ~/.config/nvim/init.vim
-  echo "source ~/.vimrc" > ~/.config/nvim/init.vim
+  #mkdir -p ~/.config/nvim
+  #touch ~/.config/nvim/init.vim
+  #echo "source ~/.vimrc" > ~/.config/nvim/init.vim
 
-  if [[ ! -f ~/.zshrc.local ]]; then
-    echo "Creating .zshrc.local"
-    touch ~/.zshrc.local
-  fi
+  #if [[ ! -f ~/.zshrc.local ]]; then
+    #echo "Creating .zshrc.local"
+    #touch ~/.zshrc.local
+  #fi
 }
 
 while test $# -gt 0; do 
