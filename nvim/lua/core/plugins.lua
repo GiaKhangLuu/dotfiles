@@ -22,12 +22,15 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
 
-	-- Line
+	-- Status line
   use 'nvim-lualine/lualine.nvim'
 
-	-- nvim - tmux windows navigation
+	-- Nvim - tmux windows navigation
 	-- use ctrl-h/j/k/l to navigate between windows
 	use 'christoomey/vim-tmux-navigator'
+
+	-- LSP
+	use 'neovim/nvim-lspconfig'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
