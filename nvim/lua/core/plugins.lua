@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' 
 	
 	-- Theme
-  --use 'ellisonleao/gruvbox.nvim'
 	use "EdenEast/nightfox.nvim" 
 
 	-- Tree
@@ -30,7 +29,34 @@ return require('packer').startup(function(use)
 	use 'christoomey/vim-tmux-navigator'
 
 	-- LSP
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
 	use 'neovim/nvim-lspconfig'
+
+	-- Auto completion
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	use 'onsails/lspkind-nvim'
+
+	-- Snippet
+	use "L3MON4D3/LuaSnip"
+
+	-- Syntax highlight
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
+
+	-- Auto pairs
+	use 'windwp/nvim-autopairs'
+
+	-- Fuzzy finder
+	use 'nvim-telescope/telescope-file-browser.nvim'
+	use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim' 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
