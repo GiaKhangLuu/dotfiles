@@ -12,10 +12,10 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim' 
+  use 'wbthomason/packer.nvim'
 	
 	-- Theme
-	use "EdenEast/nightfox.nvim" 
+	use "EdenEast/nightfox.nvim"
 
 	-- Tree
   use 'nvim-tree/nvim-tree.lua'
@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
 	-- Fuzzy finder
 	use 'nvim-telescope/telescope-file-browser.nvim'
 	use 'nvim-telescope/telescope.nvim'
-  use 'nvim-lua/plenary.nvim' 
+  use 'nvim-lua/plenary.nvim'
 
 	-- Tab
 	use 'akinsho/bufferline.nvim'
@@ -66,6 +66,17 @@ return require('packer').startup(function(use)
 
 	-- LSP UI
 	use 'glepnir/lspsaga.nvim'
+	
+	-- Indentation
+	use 'lukas-reineke/indent-blankline.nvim'
+	
+	-- Prettier
+	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'MunifTanjim/prettier.nvim'
+	
+	-- Git 
+	use 'lewis6991/gitsigns.nvim'
+	use 'dinhhuy258/git.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
