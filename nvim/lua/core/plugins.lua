@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
 	-- Tab
 	use 'akinsho/bufferline.nvim'
 
+	-- Colorizer
+	use 'norcalli/nvim-colorizer.lua'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
