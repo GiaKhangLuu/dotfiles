@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>fo',
     builtin.find_files({
       no_ignore = false,
       hidden = true,
-			initial_mode= 'normal'
+			initial_mode= 'insert'
     })
   end)
 vim.keymap.set('n', '<leader>fg', function()
