@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
 	use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim' 
 
+	-- Tab
+	use 'akinsho/bufferline.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
