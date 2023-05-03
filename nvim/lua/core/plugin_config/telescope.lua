@@ -5,6 +5,12 @@ local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
 local fb_actions = require "telescope".extensions.file_browser.actions
+--require('telescope').extensions.distant.search({
+--	paths = {'/home/alan_khang/dev/contact-lens'},
+--	pagination = 1
+--})
+--
+--local distant = require "telescope".extensions.distant
 
 local function telescope_buffer_dir()
 	return vim.fn.expand('%:p:h')
@@ -29,7 +35,13 @@ telescope.setup {
 					['a'] = fb_actions.create
 				}
 			}
-    }
+    },
+		distant = {
+			search = {
+				paths = {'home/alan_khang/dev'},
+				pagination = 1
+			}
+		}
   }
 }
 
@@ -71,3 +83,4 @@ end)
 -- To get telescope-file-browser loaded and working with telescope,
 -- you need to call load_extension, somewhere after setup function:
 require("telescope").load_extension "file_browser"
+require('telescope').load_extension "distant"
