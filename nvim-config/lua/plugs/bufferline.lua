@@ -3,7 +3,12 @@ return {
   'akinsho/bufferline.nvim',
   version = "*",
   dependencies = 'nvim-tree/nvim-web-devicons',
+  after = 'catppuccin',
   config = function()
+
+    local mocha = require("catppuccin.palettes").get_palette("mocha")
+    local latte = require("catppuccin.palettes").get_palette("latte")
+
     require("bufferline").setup({
       options = {
         numbers = "none",  -- No numbers in the tab bar
@@ -20,6 +25,22 @@ return {
           style = 'underline',  -- Use 'underline' style for the indicator
         },
       },
+
+      highlights = require("catppuccin.groups.integrations.bufferline").get({
+        styles = { "italic", "bold" },
+        custom = {
+            all = {
+                fill = { bg = latte.text },
+            },
+            mocha = {
+                background = { fg = mocha.text },
+            },
+            latte = {
+                background = { fg = latte.text },
+            },
+        },
+      }),
+
     })
   end
 }
