@@ -62,9 +62,6 @@ vim.keymap.set('n', '\\e', ':NvimTreeFocus<CR>', { noremap = true, silent = true
 vim.keymap.set('n', '\\ps', ':Lazy sync<CR>', { noremap = true, silent = true, desc = "Lazy sync" })
 vim.keymap.set('n', '\\pl', ':Lazy<CR>', { noremap = true, silent = true, desc = "Lazy menu" })
 
--- Set colorscheme (after plugins are loaded)
-vim.cmd.colorscheme "catppuccin"
-
 -- Buffer navigation keymaps using BufferLineGoToBuffer
 for i = 1, 9 do
   vim.keymap.set('n', '<A-' .. i .. '>', ':BufferLineGoToBuffer ' .. i .. '<CR>', { noremap = true, silent = true, desc = "Go to buffer " .. i })
