@@ -40,3 +40,7 @@ Current theme
 3. Tmux: Catppuccin-Frappe
 
 4. Buffer line: Catppuccin-Frappe
+
+# Demo
+
+![Demo](./assets/demo.gif)
