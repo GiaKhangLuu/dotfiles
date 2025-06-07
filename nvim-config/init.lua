@@ -70,3 +70,7 @@ end
 -- Remap Shift-V to Ctrl-V for visual block mode
 vim.api.nvim_set_keymap('v', '<S-V>', '<C-V>', { noremap = true })
 
+-- Close all buffers except the current one
+vim.keymap.set('n', '<leader>bc', [[:%bd|e#<CR>]], { noremap = true, silent = true, desc = "Close all buffers except the current one" })
+
+
