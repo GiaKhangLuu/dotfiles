@@ -60,6 +60,12 @@ ln -s /your/path/to/dotfiles/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 [Checkout this link](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df)
 
+## Download and install KITTY
+
+> **Note:** We can use **Binary install** and remember to set **Desktop integration on Linux**
+
+[Checkout this link](https://sw.kovidgoyal.net/kitty/binary/)
+
 ### Current theme
 
 1. Kitti terminal: Catppuccin-Frappe
@@ -75,3 +81,5 @@ kitty +kitten themes --reload-in=all Catppuccin-Frappe
 # References
 
 * [Tmux plugins manager](https://github.com/tmux-plugins/tpm)
+
+* [Kitty](https://sw.kovidgoyal.net/kitty/)
