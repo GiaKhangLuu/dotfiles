@@ -66,6 +66,10 @@ ln -s /your/path/to/dotfiles/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 [Checkout this link](https://sw.kovidgoyal.net/kitty/binary/)
 
+## Download and install NPM to install `pyright`
+
+[Checkout this link](https://nodejs.org/en/download/)
+
 ### Current theme
 
 1. Kitti terminal: Catppuccin-Frappe
@@ -83,3 +87,5 @@ kitty +kitten themes --reload-in=all Catppuccin-Frappe
 * [Tmux plugins manager](https://github.com/tmux-plugins/tpm)
 
 * [Kitty](https://sw.kovidgoyal.net/kitty/)
+
+* [NodeJS](https://nodejs.org/en)
