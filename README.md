@@ -70,6 +70,10 @@ ln -s /your/path/to/dotfiles/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 [Checkout this link](https://nodejs.org/en/download/)
 
+## Download fzf
+
+[Checkout this link](https://github.com/junegunn/fzf)
+
 ### Current theme
 
 1. Kitti terminal: Catppuccin-Frappe
