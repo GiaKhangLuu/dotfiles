@@ -93,3 +93,5 @@ kitty +kitten themes --reload-in=all Catppuccin-Frappe
 * [Kitty](https://sw.kovidgoyal.net/kitty/)
 
 * [NodeJS](https://nodejs.org/en)
+
+* [Lazygit](https://github.com/jesseduffield/lazygit)
