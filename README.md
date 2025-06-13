@@ -21,17 +21,7 @@ ln -s /your/path/to/dotfiles/nvim-config ~/.config/nvim/
 
 ## Download and install TMUX 
 
-**MACOS**
-
-```
-brew install tmux
-```
-
-**Ubuntu**
-
-```
-apt install tmux
-```
+[Download link](https://github.com/tmux/tmux/wiki)
 
 ### Download tmux plugins manager (TPM):
 
