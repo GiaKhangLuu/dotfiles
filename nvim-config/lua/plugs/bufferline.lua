@@ -7,7 +7,7 @@ return {
   config = function()
 
     require("bufferline").setup({
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      --highlights = require("catppuccin").get(),
       options = {
         numbers = "none",  -- No numbers in the tab bar
         close_command = "bdelete! %d",  -- Command to close tabs
